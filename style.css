@@ -1,0 +1,152 @@
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+header .cart-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+header .cart-icon img {
+  width: 60px;
+}
+
+header .cart-icon .cart-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+/* Products Section */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  margin: 0;
+}
+
+.product button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Cart Details */
+.cart-details {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: slide-down 0.5s ease-out;
+}
+
+.cart-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-details ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-details ul li img {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+.cart-details button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes slide-down {
+  from {
+    transform: translate(-50%, -20%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -10%);
+    opacity: 1;
+  }
+}
